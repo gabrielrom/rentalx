@@ -53,7 +53,7 @@ class ImportCategoryUseCase {
       const categoryExits = await this.categoriesRepository.findByName(name);
 
       if (!categoryExits) {
-        this.categoriesRepository.create({
+        await this.categoriesRepository.create({
           name,
           description,
         });
