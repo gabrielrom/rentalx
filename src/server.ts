@@ -5,7 +5,7 @@ import 'express-async-errors';
 import swaggerUi from 'swagger-ui-express';
 
 import './database';
-import './shared/container';
+import '@shared/container';
 
 import globalError from './middlewares/globalError';
 import router from './routes';
