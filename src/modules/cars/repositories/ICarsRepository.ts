@@ -5,6 +5,11 @@ import { ICreateCarDTO } from '../dtos/ICreateCarDTO';
 interface ICarsRepository {
   create(data: ICreateCarDTO): Promise<Car>;
   findByLicensePlate(license_plate: string): Promise<Car>;
+  findAvailableCars(
+    name?: string,
+    brand?: string,
+    category_id?: string,
+  ): Promise<Car[]>;
 }
 
 export { ICarsRepository };
